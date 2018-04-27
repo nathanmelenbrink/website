@@ -1,0 +1,60 @@
+<script src="https://threejs.org/build/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<div style="position:absolute;">
+  <input id="draw" type="checkbox">
+  <label for="draw" style="color: white;">draw</label>
+</div>
+<script>
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+camera.position.set(0, 0, 10);
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
+var plane = new THREE.Plane();
+var planeNormal = new THREE.Vector3();
+var point = new THREE.Vector3();
+
+document.addEventListener("mousedown", onMouseDown, false);
+document.addEventListener("mousemove", onMouseMove, false);
+
+function getPoint(event) {
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  planeNormal.copy(camera.position).normalize();
+  plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position);
+  raycaster.setFromCamera(mouse, camera);
+  raycaster.ray.intersectPlane(plane, point);
+}
+
+function setPoint() {
+  var sphere = new THREE.Mesh(new THREE.SphereBufferGeometry(.125, 4, 2), new THREE.MeshBasicMaterial({
+    color: "yellow",
+    wireframe: true
+  }));
+  sphere.position.copy(point);
+  scene.add(sphere);
+}
+
+function onMouseDown(event) {
+  getPoint(event);
+  if (draw.checked) setPoint();
+}
+
+function onMouseMove(event) {
+  getPoint(event);
+  if (draw.checked) setPoint();
+}
+
+render();
+
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
+</script>
