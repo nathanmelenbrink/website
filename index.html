@@ -1,121 +1,144 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
+    <head>
+        <title>The United Nathans</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio Filter Gallery</title>
-  
-  
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="css/style.css">
+        <link href="http://fonts.googleapis.com/css?family=Armata" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="../dist/css/jquery.gridder.min.css" rel="stylesheet">
+        <link href="css/demo.css" rel="stylesheet">
+    </head>
+    <body>
 
-  
-</head>
+        <div class="container">
+            <header>    
+            <h2><a href="index.html"><span style="color: #ed225d"> The United Nathans</span></a></h2>
+            </header>
+        </div>
 
-<body>
+        <div class="container">
+            <div class="col-lg-12">
+              
+                <div class="portfolioFilter clearfix">
+                  <a href="#" data-filter="*" class="current">All Categories</a>
+                  <a href="#" data-filter=".webDev">Web Programming</a>
+                  <a href="#" data-filter=".built">Built Environment</a>
+                  <a href="#" data-filter=".robots">Robots</a>
+                  <a href="#" data-filter=".teaching">Teaching</a>
+                  <a href="#" data-filter=".research">Research</a>
+                </div>
+            </div>
 
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <header>    
-          <h2><a href="index.html"><span style="color: #ed225d"> The United Nathans</span></a></h2>
-        </header>
-    <div class="portfolioFilter clearfix">
-      <a href="#" data-filter="*" class="current">All Categories</a>
-      <a href="#" data-filter=".webDev">Web Programming</a>
-      <a href="#" data-filter=".built">Built Environment</a>
-      <a href="#" data-filter=".built">Robots</a>
-      <a href="#" data-filter=".drawings">Teaching</a>
-      <a href="#" data-filter=".ui">Research</a>
-    </div>
-      </div>
-    <div class="portfolioContainer">
+            <!-- <div class = "portfolioContainer"> -->
+                <ul class="gridder clearfix">
+                    
+                    <!-- li class="gridder-list" data-griddercontent="#gridder-content-1">
+                        <img src="http://placehold.it/600x400" class="img-fluid"/>
+                    </li> -->
 
-      <div class="webTemplates objects" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/cc99b535336825.Y3JvcCwxMzk1LDEwOTEsMCw3ODA.png" alt="image">
-      </div>
-         <!-- The expanding grid (hidden by default) -->
-      <div id="b1" class="containerTab" style="display:none;background:green">
-      <!-- If you want the ability to close the container, add a close button -->
-      <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-      <h2>Box 1</h2>
-      <p>Lorem ipsum..</p>
-      </div>
-      
-      <div class="drawings places" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/d4cfa934191261.Y3JvcCw2MTMsNDc5LDQsMjA0.jpg" alt="image">
-      </div>
+                    <li class="gridder-list" data-griddercontent="/14_dome/index.html" > 
+                        <!-- ng-repeat="champion in filteredChampions = (champions| myFilterTerm:filter | myFilterTags:filter | orderBy: 'id':true ) " -->
+                        <div class="image" style="background-image: url('/14_dome/0.jpg');">
+                            <div class="overlay">
+                                <span class="title">Fulldome Projections</span><br>
+                                <span class="description">SmartGeometry 2014</span>
+                            </div>
+                        </div>
+                    </li>
 
-      <div class="webTemplates food" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/11893193.5482088f6f391.png" alt="image">
-      </div>
+                     <li class="gridder-list" data-griddercontent="/15_pavilion/index.html" > 
+                        <div class="image" style="background-image: url('/15_pavilion/0.jpg');">
+                            <div class="overlay">
+                                <span class="title">Title</span><br>
+                                <span class="description">Description</span>
+                            </div>
+                        </div>
+                    </li>
 
-      <div class="logos drawings" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/be4b9728308865.55b92edb950fc.jpg" alt="image">
-      </div>
+                    <li class="gridder-list" data-griddercontent="/test.html" > 
+                        <div class="image" style="background-image: url('http://placehold.it/600x400');">
+                            <div class="overlay">
+                                <span class="title">Title</span><br>
+                                <span class="description">Description</span>
+                            </div>
+                        </div>
+                    </li>
 
-      <div class="webTemplates" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/12963199.548365055868a.png" alt="image">
-      </div>
+                    <li class="gridder-list" data-griddercontent="/test.html" > 
+                        <div class="image" style="background-image: url('http://placehold.it/600x400');">
+                            <div class="overlay">
+                                <span class="title">Title</span><br>
+                                <span class="description">Description</span>
+                            </div>
+                        </div>
+                    </li>
 
-      <div class="ui" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/20342607.5434c04b49254.png" alt="image">
-      </div>
+                    <li class="gridder-list" data-griddercontent="/test.html" > 
+                        <div class="image" style="background-image: url('http://placehold.it/600x400');">
+                            <div class="overlay">
+                                <span class="title">Title</span><br>
+                                <span class="description">Description</span>
+                            </div>
+                        </div>
+                    </li>
 
-      <div class="drawings" onclick="openTab('b1');">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/b11bbb26474383.555f91fd42584.jpg" alt="image">
-      </div>
-
-      <div class="webTemplates">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/14385875.548573dae7a09.jpg" alt="image">
-      </div>
-
-      <div class="drawings">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/14569777.5485b3876a1b9.png" alt="image">
-      </div>
-      <div class="logos">
-        <img src=" https://mir-s3-cdn-cf.behance.net/projects/202/1d854a24500155.5505cccd057a4.jpg" alt="image">
-      </div>
-      <div class="ui">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/f9b95b26406487.555cc1fded76f.jpg" alt="image">
-      </div>
-      
-      <div class="logos">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/181a7b35469661.Y3JvcCw3NjUsNTk5LDY3LDA.png" alt="image">
-      </div>
-      
-       
-
-     
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-12 medium-12 large-12 columns">
-    <footer>
-      <ul>
-        <li>&copy; 2018 <a href="index.html">Northeastern University</a>. All rights reserved.</li>
-        <!-- <li><a href="index.html"> College of Art, Media and Design </a></li> -->     
-      </ul>
-        <div class="social-icons">
-          <!-- <a href="http://www.mit.edu/"><img src="css/mit.png"/></a> -->
-        <a href="http://www.mit.edu/" target="_blank"> </a>
-      </div>
-
-    </footer>
-  </div>
-</div>
+                    
+                </ul>
+            <!-- </div> -->
 
 
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='https://isotope.metafizzy.co/v1/jquery.isotope.min.js'></script>
-<script  src="js/index.js"></script>
+            
+
+        </div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 
 
+       <!--  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../dist/js/jquery.gridder.js"></script>
+        <script src='https://isotope.metafizzy.co/v1/jquery.isotope.min.js'></script>
+        <script src="js/index.js"></script>
+        <script>
+            jQuery(document).ready(function ($) {
 
+                // REMOVE AND ADD CLICK EVENT 
+                $('.doAddItem').on('click', function () {
+                    $(".gridder").data('gridderExpander').gridderAddItem('TEST');
+                });
 
-</body>
+                // Call Gridder
+                $(".gridder").gridderExpander({
+                    scrollOffset: 60,
+                    scrollTo: "panel", // "panel" or "listitem"
+                    animationSpeed: 400,
+                    animationEasing: "easeInOutExpo",
+                    showNav: true,
+                    nextText: "<i class=\"fa fa-arrow-right\"></i>",
+                    prevText: "<i class=\"fa fa-arrow-left\"></i>",
+                    closeText: "<i class=\"fa fa-times\"></i>",
+                    onStart: function () {
+                        console.log("Gridder Inititialized");
+                    },
+                    onExpanded: function (object) {
+                        console.log("Gridder Expanded");
+                    },
+                    onChanged: function (object) {
+                        console.log("Gridder Changed");
+                    },
+                    onClosed: function () {
+                        console.log("Gridder Closed");
+                    },
+                    onContent: function () {
+                        $('.carousel').carousel(); // FIRE YOUR EXTERNAL PLUGIN, COULD BE ANYTHING.
+                    }
+                });
 
+            });
+        </script>
+    </body>
 </html>
