@@ -10,7 +10,6 @@
         <link href="http://fonts.googleapis.com/css?family=Armata" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="../dist/css/jquery.gridder.min.css" rel="stylesheet">
-        <link href="css/demo.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -36,13 +35,8 @@
 
             <!-- <div class = "portfolioContainer"> -->
                 <ul class="gridder clearfix" id='portfolio'>
-                    
-                    <!-- li class="gridder-list" data-griddercontent="#gridder-content-1">
-                        <img src="http://placehold.it/600x400" class="img-fluid"/>
-                    </li> -->
 
                     <li class="gridder-list scale-anm research teaching" data-griddercontent="/14_dome/index.html" > 
-                        <!-- ng-repeat="champion in filteredChampions = (champions| myFilterTerm:filter | myFilterTags:filter | orderBy: 'id':true ) " -->
                         <div class="image" style="background-image: url('/14_dome/0.jpg');">
                             <div class="overlay">
                                 <span class="title">Fulldome Projections</span><br>
@@ -51,11 +45,11 @@
                         </div>
                     </li>
 
-                     <li class="gridder-list scale-anm built" data-griddercontent="/15_pavilion/index.html" > 
+                     <li class="gridder-list scale-anm built" data-griddercontent="/15_pavilion" > 
                         <div class="image" style="background-image: url('/15_pavilion/0.jpg');">
                             <div class="overlay">
-                                <span class="title">Title</span><br>
-                                <span class="description">Description</span>
+                                <span class="title">Lo-Fab Pavilion</span><br>
+                                <span class="description">Boston - 2015</span>
                             </div>
                         </div>
                     </li>
@@ -102,8 +96,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="../dist/js/jquery.gridder.js"></script>
-        <script src='../dist/js/isotope.js'></script>
-        <script src="js/index.js"></script>
+
         <script>
             jQuery(document).ready(function ($) {
 
@@ -119,8 +112,9 @@
                     animationSpeed: 400,
                     animationEasing: "easeInOutExpo",
                     showNav: true,
-                    nextText: "<i class=\"fa fa-arrow-right\"></i>",
-                    prevText: "<i class=\"fa fa-arrow-left\"></i>",
+                    //nextText: "<i class=\"fa fa-arrow-right\"></i>",
+                    nextText: "<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
+                    prevText: "<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
                     closeText: "<i class=\"fa fa-times\"></i>",
                     onStart: function () {
                         console.log("Gridder Inititialized");

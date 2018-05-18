@@ -19,16 +19,12 @@
         $(this).addClass('current');
         var selector = $(this).attr('data-filter');
         var settings = $.fn.gridderExpander.defaults; 
-        console.log(selector);
 
         var $current_gridder = $(".currentGridder");
         var $current_target = $current_gridder.find(".gridder-show");
         if($current_gridder.length){
-            console.log('active gridder');
-            console.log($current_gridder);
             $current_gridder.removeClass("hasSelectedItem");
             // REMOVES GRIDDER EXPAND AREA
-            //    visible = false;
                 $current_gridder.find(".selectedItem").removeClass("selectedItem");
                 
                 $current_gridder.find(".gridder-show").slideUp(settings.animationSpeed, settings.animationEasing, function() {
