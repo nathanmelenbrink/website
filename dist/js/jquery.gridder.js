@@ -14,6 +14,44 @@
         return c;
     })();
 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+        var selector = $(this).attr('data-filter');
+        var settings = $.fn.gridderExpander.defaults; 
+        console.log(selector);
+
+        var $current_gridder = $(".currentGridder");
+        var $current_target = $current_gridder.find(".gridder-show");
+        if($current_gridder.length){
+            console.log('active gridder');
+            console.log($current_gridder);
+            $current_gridder.removeClass("hasSelectedItem");
+            // REMOVES GRIDDER EXPAND AREA
+            //    visible = false;
+                $current_gridder.find(".selectedItem").removeClass("selectedItem");
+                
+                $current_gridder.find(".gridder-show").slideUp(settings.animationSpeed, settings.animationEasing, function() {
+                    $current_gridder.find(".gridder-show").remove();
+                    settings.onClosed($current_gridder);
+                });
+
+            /* REMOVE CURRENT ACTIVE GRIDDER */
+            $(".currentGridder").removeClass("currentGridder");
+        }else{
+            console.log("No active gridder.");
+        }
+
+        $("#portfolio").fadeTo(100, 0.1);
+        $("#portfolio li").not(""+selector).fadeOut().removeClass('scale-anm');
+        setTimeout(function() {
+          $(""+selector).fadeIn().addClass('scale-anm');
+          $("#portfolio").fadeTo(300, 1);
+        }, 300); 
+
+        return false;
+    }); 
+
     /* Custom Easing */
     $.fn.extend($.easing,{
         def:"easeInOutExpo", easeInOutExpo:function(e,f,a,h,g){if(f===0){return a;}if(f===g){return a+h;}if((f/=g/2)<1){return h/2*Math.pow(2,10*(f-1))+a;}return h/2*(-Math.pow(2,-10*--f)+2)+a;}

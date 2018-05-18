@@ -11,31 +11,31 @@ $(window).load(function(){
     //     // }
     // });
  
-    $('.portfolioFilter a').click(function(){
-        $('.portfolioFilter .current').removeClass('current');
-        $(this).addClass('current');
-        var selector = $(this).attr('data-filter');
-        console.log(selector);
+    // $('.portfolioFilter a').click(function(){
+    //     $('.portfolioFilter .current').removeClass('current');
+    //     $(this).addClass('current');
+    //     var selector = $(this).attr('data-filter');
+    //     console.log(selector);
 
-        $("#portfolio").fadeTo(100, 0.1);
-        $("#portfolio li").not(""+selector).fadeOut().removeClass('scale-anm');
-        setTimeout(function() {
-          $(""+selector).fadeIn().addClass('scale-anm');
-          $("#portfolio").fadeTo(300, 1);
-        }, 300); 
+    //     $("#portfolio").fadeTo(100, 0.1);
+    //     $("#portfolio li").not(""+selector).fadeOut().removeClass('scale-anm');
+    //     setTimeout(function() {
+    //       $(""+selector).fadeIn().addClass('scale-anm');
+    //       $("#portfolio").fadeTo(300, 1);
+    //     }, 300); 
 
-        // $container.isotope({
-        //     transformsEnabled: false,
-        //     itemSelector: '.gridder-list',
-        //     filter: selector//,
-        //     // animationOptions: {
-        //     //     duration: 750,
-        //     //     easing: 'linear',
-        //     //     queue: false
-        //     // }
-        //  });
-         return false;
-    }); 
+    //     // $container.isotope({
+    //     //     transformsEnabled: false,
+    //     //     itemSelector: '.gridder-list',
+    //     //     filter: selector//,
+    //     //     // animationOptions: {
+    //     //     //     duration: 750,
+    //     //     //     easing: 'linear',
+    //     //     //     queue: false
+    //     //     // }
+    //     //  });
+    //      return false;
+    // }); 
 });
 
 
