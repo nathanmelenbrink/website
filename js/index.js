@@ -1,5 +1,5 @@
 $(window).load(function(){
-    var $container = $('.portfolioContainer');
+    var $container = $('.gridder');
     $container.isotope({
         filter: '*',
         animationOptions: {
