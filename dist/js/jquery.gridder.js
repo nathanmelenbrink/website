@@ -158,11 +158,14 @@
                     thecontent = $(myself.data("griddercontent")).html();
                     processContent(myself, thecontent);
                 }else{
-                    
+
+                    myself[0].baseURI.replace("http://", "https://");
+                    console.log(myself);
                     // Load AJAX Content
                     $.ajax({
                         type: "GET",
                         url: myself.data("griddercontent"),
+                        //url: 'https://nathanmelenbrink.com/14_dome/',
                         success: function(data) {
                             thecontent = data;
                             processContent(myself, thecontent);
@@ -237,7 +240,9 @@
             /* CLICK EVENT */
             _this.on("click", ".gridder-list", function (e) {
                 e.preventDefault();
+                $(this)[0].baseURI.replace("http://", "https://");
                 var myself = $(this);
+                //console.log(myself);
                 openExpander(myself);
             });
             
