@@ -157,6 +157,7 @@
                     // Load #ID Content
                     thecontent = $(myself.data("griddercontent")).html();
                     processContent(myself, thecontent);
+                    console.log("ID");
                 }else{
 
                     myself[0].baseURI.replace("http://", "https://");
@@ -167,6 +168,7 @@
                         url: myself.data("griddercontent"),
                         //url: 'https://nathanmelenbrink.com/14_dome/',
                         success: function(data) {
+                            //console.log(myself.data("griddercontent"));
                             thecontent = data;
                             processContent(myself, thecontent);
                         },
@@ -180,7 +182,18 @@
             
             // PROCESS CONTENT
             function processContent(myself, thecontent){
+                
+                // this works, but should find a better way to change the baseURI onClick
+                // instead of waiting until we get to this point to process the content
+                
+                var $thecontent = $(thecontent); // jQuery object
 
+                $('img', $thecontent).replaceWith(function () {
+                    return '<img src="' + myself.data("griddercontent") + '/' + $(this).attr('src') + '">';
+                });
+
+                thecontent = $thecontent.html();
+                 //console.log(thecontent);
                 /* FORMAT OUTPUT */   
                 var htmlcontent = "<div class=\"gridder-padding\">";
                 
@@ -240,9 +253,13 @@
             /* CLICK EVENT */
             _this.on("click", ".gridder-list", function (e) {
                 e.preventDefault();
+                let proj = $(this).data("griddercontent");
+                console.log(proj);
                 $(this)[0].baseURI.replace("http://", "https://");
+                //$(this)[0].baseURI = proj;
                 var myself = $(this);
-                //console.log(myself);
+                console.log($(this)[0].baseURI);
+                //console.log(myself.data("griddercontent"));
                 openExpander(myself);
             });
             
