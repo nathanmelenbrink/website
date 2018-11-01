@@ -67,11 +67,28 @@ img {
   /*max-height: 800px;*/
   width: auto;
 }
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: -300px;
 
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 8%;
+
+  /*color: $carousel-control-color;*/
+  text-align: center;
+  /*opacity: $carousel-control-opacity;*/
+
+
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  bottom: 300px;
+}
+
 /*.btn {
     font-family: Lato;
     font-size: 1rem;
