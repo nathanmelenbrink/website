@@ -45,7 +45,7 @@ img {
   color: black;
 }
 
-.main-text > .projDesc > p, h2 {
+.projDesc > p, h2 {
   display: inline;
   background: white;
   padding: 2px;
