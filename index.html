@@ -8,27 +8,7 @@ http-server -c-1
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131686897-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-131686897-1');
-        </script>
-        <title>Nathan Melenbrink</title>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="../dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="../dist/css/jquery.gridder.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    
     <body>
 
         <div class="container">
@@ -126,7 +106,7 @@ http-server -c-1
                     <li class="gridder-list scale-anm built" data-griddercontent="/14_dragon" > 
                         <div class="image" style="background-image: url('/14_dragon/0.jpg');">
                             <div class="overlay">
-                                <span class="title">Dragon Burn Pavilion</span><br>
+                                <span class="title">Dragon Pavilion</span><br>
                                 <span class="description">Sanshan - 2014</span>
                             </div>
                         </div>
@@ -147,7 +127,7 @@ http-server -c-1
         <div id="footer"></div>
         
         <script src='../dist/js/jquery.min.js'></script>
-        <script src="../dist/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="../dist/js/popper.min.js" ></script>
         <script src="../dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="../dist/js/jquery.gridder.js"></script>
 
@@ -190,5 +170,27 @@ http-server -c-1
                 $("#footer").load("../footer.html"); 
             });
         </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131686897-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-131686897-1');
+        </script> -->
     </body>
+    <head style="display: none;">
+        
+        <title>Nathan Melenbrink</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="../dist/css/jquery.gridder.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
 </html>
