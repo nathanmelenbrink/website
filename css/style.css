@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  color: #666;
+  color: #CCC;
 }
 
 a:focus {
@@ -64,8 +64,10 @@ img {
   height:70vh;
   padding-top: 18px;
   border-bottom: 24px;
-  background: black;
-  opacity: 0.6;
+  /*background: black;*/
+  /*opacity: 0.6;*/
+  background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+  background: rgba(0, 0, 0, 0.6);
   display: inline;
   overflow: hidden;
 }

@@ -41,7 +41,7 @@
         $("#portfolio").fadeTo(100, 0.1);
         $("#portfolio li").not(""+selector).fadeOut().removeClass('scale-anm');
         setTimeout(function() {
-          $(""+selector).fadeIn().addClass('scale-anm');
+          $("#portfolio li"+selector).fadeIn().addClass('scale-anm');
           $("#portfolio").fadeTo(300, 1);
         }, 300); 
 
@@ -295,3 +295,41 @@
     };
      
 })(jQuery);
+
+jQuery(document).ready(function ($) {
+
+                // REMOVE AND ADD CLICK EVENT 
+                $('.doAddItem').on('click', function () {
+                    $(".gridder").data('gridderExpander').gridderAddItem('TEST');
+                });
+
+                // Call Gridder
+                $(".gridder").gridderExpander({
+                    scrollOffset: 30,
+                    scrollTo: "panel", // "panel" or "listitem"
+                    animationSpeed: 400,
+                    animationEasing: "easeInOutExpo",
+                    showNav: true,
+                    //nextText: "<i class=\"fa fa-arrow-right\"></i>",
+                    nextText: "<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
+                    prevText: "<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
+                    closeText: "<i class=\"fa fa-times\"></i>",
+                    onStart: function () {
+                        console.log("Gridder Inititialized");
+                    },
+                    onExpanded: function (object) {
+                        console.log("Gridder Expanded");
+                    },
+                    onChanged: function (object) {
+                        console.log("Gridder Changed");
+                    },
+                    onClosed: function () {
+                        console.log("Gridder Closed");
+                    },
+                    onContent: function () {
+                        $('.carousel').carousel(); // FIRE YOUR EXTERNAL PLUGIN, COULD BE ANYTHING.
+                    }
+                });
+
+                $("#footer").load("../footer.html"); 
+            });
