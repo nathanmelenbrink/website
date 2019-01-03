@@ -5,8 +5,26 @@ body {
   font-family: "Oswald", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
+a {
+  color: #666;
+}
+
 a:focus {
   outline: none;
+}
+
+p {
+  font-size: 14px;
+  font-family: Calibri;
+/*  height: 30vh;*/
+}
+
+h2 {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none; 
 }
 
 .portfolioFilter {
@@ -40,16 +58,24 @@ img {
 
 .main-text{
   position: absolute;
-  top: 30px;
+  top: 0px;
   width: 30%;
-  color: black;
+  color: white;
+  height:70vh;
+  padding-top: 18px;
+  border-bottom: 24px;
+  background: black;
+  opacity: 0.6;
+  display: inline;
+  overflow: hidden;
 }
 
-.projDesc > p, h2 {
-  display: inline;
-  background: white;
-  padding: 2px;
-  box-shadow: 2px 0 0 white, -2px 0 0 white;
+.projDesc {
+  /*display: inline;*/
+  overflow: hidden;
+  position: relative;
+height:60vh;
+  padding: 16px;
 }
 
 
@@ -67,26 +93,49 @@ img {
   /*max-height: 800px;*/
   width: auto;
 }
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev{
   position: absolute;
   top: 0;
-  bottom: -300px;
+  bottom: 0px;
 
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  width: 8%;
+  width: 5%;
 
   /*color: $carousel-control-color;*/
   text-align: center;
   /*opacity: $carousel-control-opacity;*/
+  z-index: 1000;
 
+}
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  right:70%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 5%;
+
+  /*color: $carousel-control-color;*/
+  text-align: center;
+  /*opacity: $carousel-control-opacity;*/
+  z-index: 1000;
 
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  bottom: 300px;
+  position: absolute;
+  bottom: 12px;
+}
+
+.carousel-indicators{
+  bottom: 20px;
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /*.btn {
@@ -138,12 +187,13 @@ img {
 }
 
 .jumbotron, body { background: white; /*color: gray;*/ }
-.jumbotron h2, body h2 { margin-top: 30px; /*color: gray;*/}
+.jumbotron h2, body h2 { margin-top: 0px; /*color: gray;*/}
 
 .gridder { margin: 0px; padding: 0px; list-style-type: none; font-size: 0; text-align: center; }
 .gridder .gridder-list { display: inline-block; vertical-align: top; cursor: pointer; position: relative; width: 350px; margin-bottom: 0.5%; margin-right: 0.5%; }
 .gridder .gridder-list .image { background-color: #313131; background-size: cover; background-position: center; width: 350px; height: 250px; position: relative; }
-.gridder .overlay { position: absolute; left: 10%; top: 10%; color: #FFF; line-height: 130%; text-align: left; }
+.gridder .overlay { 
+  position: absolute; left: 10%; top: 10%; color: #FFF; line-height: 130%; text-align: left; }
 .gridder .overlay .title { font-weight: 800; font-size: 16px; color: #FFF; }
 .gridder .overlay .description { font-weight: 300; font-size: 14px; color: #FFF; }
 
@@ -151,12 +201,12 @@ img {
 .gridder .ab .title { font-weight: 800; font-size: 16px; color: black; line-height: 200%;}
 .gridder .ab .description { font-weight: 300; font-size: 14px; color: black; line-height: 150%;}
 
-.gridder .gridder-list, .gridder .gridder-show { font-size: 12px; }
+.gridder .gridder-list, .gridder .gridder-show { /*font-size: 12px;*/ }
 .gridder .selectedItem:after { content: ' '; display: block; border-bottom: 10px solid #222; border-left: 10px solid transparent; border-right: 10px solid transparent; height: 0%; position: absolute; top: 101%; width: 0; left: 43%; margin-bottom: -4px; }
 .gridder.hasSelectedItem .gridder-list:not(.selectedItem) { opacity: .2; }
 
-.gridder-show { padding: 4%; background: white; position: relative; display: block; float: left; width: 100%; margin-bottom: 0.5%; text-align: left; color: #CCC; }
-.gridder-show img { width: 100%; box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2); }
+.gridder-show { padding: 4%; background: white; position: relative; display: block; float: left; width: 100%; margin-bottom: 0.5%; text-align: left; /*color: #CCC;*/ }
+.gridder-show img { width: 100%; /*box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2); */}
 
 .gridder-content { display: none; }
 
