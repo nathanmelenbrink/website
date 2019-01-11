@@ -76,7 +76,7 @@ img {
   /*display: inline;*/
   overflow: hidden;
   position: relative;
-height:60vh;
+  height:60vh;
   padding: 16px;
 }
 
@@ -93,6 +93,8 @@ height:60vh;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   /*max-height: 800px;*/
+  object-fit:cover;
+  height: 100% !important;
   width: auto;
 }
 .carousel-control-prev{
