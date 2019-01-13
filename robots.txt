@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Allow: /sitemap.htm
-Sitemap: https://nathanmelenbrink.com/sitemap.xml
+Sitemap: http://nathanmelenbrink.com/sitemap.xml
