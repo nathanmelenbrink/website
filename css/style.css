@@ -142,8 +142,8 @@ img {
   margin-right: 5%;
 }
 
-/*.btn {
-    font-family: Lato;
+.btn {
+    /*font-family: Lato;
     font-size: 1rem;
     font-weight: normal;
     text-decoration: none;
@@ -153,11 +153,11 @@ img {
     padding: .5rem 1rem;
     margin: 0;
     height: auto;
-    border: 1px solid;
-    vertical-align: middle;
+    border: 1px solid;*/
+    vertical-align: top;/*
     -webkit-appearance: none;
     color: #555;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);*/
 }
 
 .btn:hover {
@@ -169,7 +169,7 @@ img {
   border-color: var(--darken-2);
   box-shadow: 0 0 0 3px var(--darken-3);
 }
-*/
+
 .containerTab {
     padding: 20px;
     color: white;
