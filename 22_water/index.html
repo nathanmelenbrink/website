@@ -16,21 +16,28 @@
 Here's an update working toward the goal of an automated pH test, using a conventional chemical aquarium test kit. The video below shows that we're most of the way there! 
 
 <video controls>
-		<source src="./pH_demo.mp4" type="video/mp4">
-	</video>
+	<source src="./pH_demo.mp4" type="video/mp4" width="640" height="480" >
+</video>
 
-The stainless steel bowl represents the water tank to be tested, and the clear plastic container is a waste receptacle. A small-diameter pump 
+The stainless steel bowl represents the water tank to be tested, and the clear plastic container is a waste receptacle. A small-diameter pump first pumps 3 drops of pH testing solution. Then, a larger diameter pump adds 5 mL of water to the testing chamber from the bottom, thereby stirring the solution as it is pumped in. Next, the LED flashes and the camera takes a picture. (Unfortunately there are too many wires blocking my ability to put it in the right position to photograph the testing chamber, but that's the next thing to fix). 
 
-In the demo, the water enters the testing chamber and then is removed. This could still leave some residue in the testing chamber.
+Then, the larger diameter pump switches direction, allowing the water to be pumped out. The larger diameter pump is outfitted with one-way valves, such that in one direction it draws water from the body and pumps it to the testing chamber, and in the other direction it draws water from the testing chamber and pumps it to the waste receptacle. When clearing the testing chamber, it is important that the pump not only clear the testing chamber, but also the tube itself all the way to the y-valve that separates input from output. This ensures that none of the waste water remains in the tube to be pumped back into the testing chamber. 
 
+In the demo, the water enters the testing chamber and then is removed. This could still leave some residue in the testing chamber. It seems like it would be a good idea to run a "flush cycle" at least once after tests to better clean out the testing chamber. 
 
 The video speed is 10x -- so in reality it takes closer to 2 minutes to perform a test. We can speed that up quite a bit if necessary (for example, use a larger diameter pump for the testing solution, user a higher voltage for the water pump, etc.). But maybe it's okay if it takes that much time? 
 
-Next steps: 
+Immediate Next Steps: 
 
-* Modify peristaltic pump design to be a bit looser (currently requires too much force, occasionally skips steps). Design reservoir to hold pH testing solution. 
-* Design PCB to hold all electronics. How many pumps should it be able to power, eventually?
-* Work on programming, image processing  
+* Design PCB to hold all electronics. How many pumps should it be able to power, eventually? 
+* Assemble prototype, test photo quality 
+* Finish programming, image processing algorithm 
+
+Later Steps: 
+
+* Modify peristaltic pump design to be a bit looser (currently requires too much force, occasionally skips steps). 
+* Design container to hold the testing solutions (4x? or more?) 
+
 
 </xmp>
 
