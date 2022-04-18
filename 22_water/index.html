@@ -10,6 +10,52 @@
 </topbar>
  -->
 
+### Update Apr 18, 2022
+
+I assembled all of the components in a plastic tub. Unfortunately, the mass distribution is not good, and the tub tips over when it's placed in water. That means I need to distribute mass over a wider area. I was hoping to avoid that, because it means that the footprint of the device needs to grow larger.
+Especially if we want to add additional solutions/pumps/motors, we're going to need more space, so the device won't be as compact as I'd hoped. We could move the battery off-board, but it doesn't save that much weight/volume, and eventually we'll want everything self-contained. 
+
+For the pH solution, I simply cut the nozzle so I could insert the silicone tube. I think that's a fine approach, even for a product, unless/until we're making our own solutions. 
+
+Right now the tube to collect samples just hangs off the side. It could go through the bottom of the container instead, but this seems fine for now. 
+
+The waste water drains just to the bottom of the container (the battery and motor are elevated so they don't get wet). It would need to be emptied after every ~20 tests. 
+
+<!-- Gallery -->
+<div class="row">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img src="./418/1.jpg" style="width:45%"/>
+    <img src="./418/2.jpg" style="width:45%"/>
+    <img src="./418/3.jpg" style="width:45%"/>
+    <img src="./418/4.jpg" style="width:45%"/>
+    <img src="./418/5.jpg" style="width:45%"/>
+    <img src="./418/6.jpg" style="width:45%"/>
+    <img src="./418/7.jpg" style="width:45%"/>
+    <img src="./418/8.jpg" style="width:45%"/>
+    <img src="./418/9.jpg" style="width:45%"/>
+    <img src="./418/10.jpg" style="width:45%"/>
+  </div>
+</div>
+<!-- Gallery -->
+
+
+### Update Apr 16, 2022
+
+Some changes had to be made to the first PCB. 
+
+- I had tried using the H-Bridge A4953 to drive the pump. However, this requires an 8V+ supply, and we're kind of trying to avoid higher voltages. So, for this version I will solder on a L9110 module, but for future versions I will update the design to use a L9110 chip instead of A4953. 
+- I had to add a logic voltage supply to the stepper driver, had forgotten that initially. 
+
+Peristaltic pump: Assembly is too tight.
+
+- Consider using larger diameter tubing. Could all tubing be same diameter? How fast could a peristaltic pump with a stepper motor be? 
+- Or, just make a larger cavity for the tube in the 3D print. 
+
+### Update Mar 10, 2022
+
+I have been working on this when I can find time. I designed and made the custom PCB, although it's not working perfect yet and I need to make some adjustments. 
+
+![pcb](./pcb.jpg)
 
 ### Update Jan 16, 2022
 
